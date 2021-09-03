@@ -1,0 +1,56 @@
+ankommen	er kommt an		er kam an	angekommen		to arrive
+anrufen		sie ruft an		sie rief an 	angerufen		to call
+anziehen	man zieht an		man zog an	 angezogen		to put on
+arbeiten	er arbeitet		er arbeitete	gearbeitet		to work
+beginnen	sie beginnt		sie begann	 begonnen		to begin
+bleiben 		man bleibt		man blieb	geblieben *		to stay
+bringen 	er bringt		er brachte  	gebracht		to bring
+denken		sie denkt		sie dachte  	gedacht			to think
+essen		man isst		man aβ		gegessen		to eat
+fahren		er fährt			er fuhr		gefahren *		to drive
+fallen		sie fällt			sie fiel		gefallen *		to fall
+fangen		man fängt		man fing	gefangen		to catch
+finden		er findet		er fand		gefunden		to find
+fliegen		sie fliegt		sie flog		geflogen *		to fly
+geben		es gibt 			es gab		gegeben		to give
+gehen		man geht		man ging	gegangen *		to go
+gewinnen	er gewinnt		er gewann	gewonnen		to win
+glauben		sie glaubt		sie glaubte 	geglaubt		to believe
+helfen		es hilft			es half		geholfen		to help
+kennen		er kennt		er kannte	gekannt			to know
+kommen	    sie kommt		sie kam		gekommen *		to come
+laufen		es läuft			es lief		gelaufen *		to run
+lesen	    man liest		man las		gelesen			to read
+mögen		er mag			er mochte	gemocht		to like
+nehmen		sie nimmt		sie nahm	genommen		to take
+reiten		man reitet		man reitete 	geritten *		to ride
+rennen		er rennt			er rannte	gerannt *		to run
+schlafen	sie schläft		sie schlief 	geschlafen		to sleep
+schlieβen	es schlieβt		es schloss 	geschlossen		to close
+schneiden   man schneidet		man schnitt 	geschnitten		to cut
+schreiben	er schreibt		er schrieb 	geschrieben		to write
+schwimmen	sie schwimmt		sie schwamm 	geschwommen *	to swim
+sehen		man sieht		man sah	gesehen		to see
+sein		es ist			es war		gewesen *		to be
+singen		er singt			er sang		gesungen		to sing
+sitzen		sie sitzt			sie saβ		gesessen 		to sit
+sprechen	man spricht		man sprach	gesprochen		to talk
+stehen		es steht			es stand	gestanden		to stand
+stehlen		er stiehlt		er stahl		gestohlen		to steal
+steigen		sie steigt		sie stieg	gestiegen		to climb
+sterben		man stirbt		man starb	gestorben *		to die
+tragen		es trägt			es trug		getragen		to wear
+treffen		er trifft			er traf		getroffen		to meet
+trinken		sie trinkt		sie trank	getrunken		to drink
+tun		man tut			man tat		getan			to do
+uploaden	es uploadet		es uploadete	upgeloadet		to upload
+verbringen	er verbringt		er verbrachte	verbracht		to spend time
+vergessen	sie vergisst		sie vergaβ	vergessen		to forget
+verlieren	man verliert		man verlor	verloren		to lose
+verstehen	es versteht		es verstand 	verstanden		to understand
+waschen	    er wäscht		er wusch	gewaschen		to wash
+werden		sie wird			sie wurde	geworden *		to become
+werfen		man wirft		man warf	geworfen		to throw
+wissen		er weiβ			er wusste	gewusst		to know
+ziehen		sie zieht		sie zog		gezogen		to pull
+
