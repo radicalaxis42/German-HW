@@ -21,7 +21,7 @@ kennen		er kennt		er kannte	gekannt			to know
 kommen	    sie kommt		sie kam		gekommen *		to come
 laufen		es läuft			es lief		gelaufen *		to run
 lesen	    man liest		man las		gelesen			to read
-mögen		er mag			er mochte	gemocht		to like
+mogen		er mag			er mochte	gemocht		to like
 nehmen		sie nimmt		sie nahm	genommen		to take
 reiten		man reitet		man reitete 	geritten *		to ride
 rennen		er rennt			er rannte	gerannt *		to run
