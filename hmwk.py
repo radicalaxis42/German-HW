@@ -31,6 +31,10 @@ pygame.draw.rect(window, white, (40, 650, 500, 70))
 pygame.draw.rect(window, black, (30, 640, 520, 90), 20, 20)
 textsurface = myfont.render('Check', False, (0, 0, 0, 128))
 window.blit(textsurface, (50, 660))
+pygame.draw.rect(window, white, (570, 650, 200, 70))
+pygame.draw.rect(window, black, (560, 640, 220, 90), 20, 20)
+textsurface = myfont.render('2', False, (0, 0, 0, 128))
+window.blit(textsurface, (660, 660))
 typing = [False, False, False, False, False]
 string_list = ['', '', '', '', '']
 running = True
@@ -39,31 +43,33 @@ word = contents[random.randint(0, len(contents) - 1)]
 correct = True
 reading = False
 won = False
-
+last_word = word
+one = False
 def segment(word):
-    t = False
-    words_list = ['', '', '', '', '']
-    string_bool = [True, False, False, False, False]
-    for letter in range(len(word)):
-        if t:
-            if word[letter] != "\t":
-                ind = string_bool.index(True)
-                string_bool[ind] = False
-                if ind < 4:
-                    string_bool[ind + 1] = True
-                t = False
+    if word == 'schneiden   man schneidet\t\tman schnitt \tgeschnitten\t\tto cut\n':
+        return ['schneiden', 'man schneidet', 'man schnitt', 'geschnitten', 'to cut']
+    else:
+        t = False
+        words_list = ['', '', '', '', '']
+        string_bool = [True, False, False, False, False]
+        for letter in range(len(word)):
+            if t:
+                if word[letter] != "\t":
+                    ind = string_bool.index(True)
+                    string_bool[ind] = False
+                    if ind < 4:
+                        string_bool[ind + 1] = True
+                    t = False
+                else:
+                    continue
+            if word[letter] != "\t" and word[letter] != "\n":
+                words_list[string_bool.index(True)] += word[letter]
             else:
-                continue
-        if word[letter] != "\t" and word[letter] != "\n":
-            words_list[string_bool.index(True)] += word[letter]
-        else:
-            t = True
-    for i in range(5):
-        n = 0
-        while words_list[i][n] == ' ':
-            n += 1
-        words_list[i].replace(' ', '', n)
-    return words_list
+                t = True
+        for i in range(5):
+            n = words_list[i].count(' ')
+            words_list[i].replace(' ', '', n)
+        return words_list
 
 
 def write(i, letter):
@@ -77,6 +83,7 @@ def write(i, letter):
 segmented = segment(word)
 given = random.randint(0, len(segmented) - 1)
 write(given, segmented[given])
+override = False
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -127,8 +134,18 @@ while running:
                                             given = random.randint(0, len(segmented) - 1)
                                             string_list[given] = ''
                                             write(given, segmented[given])
+                                            pygame.draw.rect(window, white, (570, 650, 200, 70))
+                                            pygame.draw.rect(window, black, (560, 640, 220, 90), 20, 20)
+                                            textsurface = myfont.render(str(contents.count(word)), False, (0, 0, 0, 128))
+                                            window.blit(textsurface, (660, 660))
                                     else:
-                                        contents.append(word)
+                                        for i in range(5):
+                                            print(string_list[i], segmented[i], string_list[i] == segmented[i])
+                                        override = True
+                                        if contents.count(word) == 1:
+                                            one = True
+                                            contents.append(word)
+                                        last_word = word
                                         word = contents[random.randint(0, len(contents) - 1)]
                                         for j in range(len(segmented)):
                                             string_list[j] = ''
@@ -137,7 +154,12 @@ while running:
                                         pygame.draw.rect(window, black, (30, 640, 520, 90), 20, 20)
                                         textsurface = myfont.render('Continue', False, (0, 0, 0, 128))
                                         window.blit(textsurface, (50, 660))
+                                        pygame.draw.rect(window, white, (570, 650, 200, 70))
+                                        pygame.draw.rect(window, black, (560, 640, 220, 90), 20, 20)
+                                        textsurface = myfont.render('Override', False, (0, 0, 0, 128))
+                                        window.blit(textsurface, (580, 660))
                                         reading = True
+                                        correct = True
                                 else:
                                     word = contents[random.randint(0, len(contents) - 1)]
                                     segmented = segment(word)
@@ -152,6 +174,21 @@ while running:
                                     textsurface = myfont.render('Check', False, (0, 0, 0, 128))
                                     window.blit(textsurface, (50, 660))
                                     reading = False
+                                    override = False
+                                    one = False
+                                    pygame.draw.rect(window, colour, (560, 640, 220, 90))
+                                    pygame.draw.rect(window, white, (570, 650, 200, 70))
+                                    pygame.draw.rect(window, black, (560, 640, 220, 90), 20, 20)
+                                    textsurface = myfont.render(str(contents.count(word)), False, (0, 0, 0, 128))
+                                    window.blit(textsurface, (660, 660))
+                        elif mx > 570 and mx < 770:
+                            if override:
+                                del contents[contents.index(last_word)]
+                                if one:
+                                    del contents[contents.index(last_word)]
+                                    one = False
+                                pygame.draw.rect(window, colour, (560, 640, 220, 90))
+                                override = False
                 elif event.type == pygame.KEYDOWN:
                     for i in range(5):
                         if i != given:
